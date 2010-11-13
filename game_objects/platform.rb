@@ -10,7 +10,8 @@ class Platform < GameObject
   end
     
   def setup
-    @image = Image["concrete.png"]
+    @image ||= Image["#{self.filename}.png"]
+    #@image = Image["crate.png"]
   end
     
   def bounding_box
@@ -19,5 +20,15 @@ class Platform < GameObject
     
   def draw
     @image.draw(@x,@y,200)
+  end
+end
+
+class Concrete < Platform
+end
+
+class Crate < Platform
+  def initialize(options = {})
+    super
+    @box = Rect.new([@x, @y, 64,64])
   end
 end
