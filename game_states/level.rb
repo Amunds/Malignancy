@@ -6,17 +6,17 @@ class Level < GameState
     self.viewport.game_area = [0, 0, 12000, 12000]
     self.viewport.lag = 0.95
     
-    @platform = Platform::Concrete.create( :x => 0, :y => $window.height - 128, :width => 128, :height => 128)
-    @platform2 = Platform::Concrete.create( :x => 128, :y => $window.height - 128, :width => 128, :height => 128)
-    @platform3 = Platform::Concrete.create( :x => 256, :y => $window.height - 128, :width => 128, :height => 128)
-    @platform4 = Platform::Concrete.create( :x => 384, :y => $window.height - 128, :width => 128, :height => 128)
-    @platform5 = Platform::Concrete.create( :x => 512, :y => $window.height - 128, :width => 128, :height => 128)
-    @platform6 = Platform::Concrete.create( :x => 640, :y => $window.height - 128, :width => 128, :height => 128)
-    @platform7 = Platform::Concrete.create( :x => 768, :y => $window.height - 128, :width => 128, :height => 128)
-    @platform8 = Platform::Concrete.create( :x => 896, :y => $window.height - 128, :width => 128, :height => 128)
+    @platform = Platform::Concrete.create( :x => 0, :y => $window.height - 128)
+    @platform2 = Platform::Concrete.create( :x => 128, :y => $window.height - 128)
+    @platform3 = Platform::Concrete.create( :x => 256, :y => $window.height - 128)
+    @platform4 = Platform::Concrete.create( :x => 384, :y => $window.height - 128)
+    @platform5 = Platform::Concrete.create( :x => 512, :y => $window.height - 128)
+    @platform6 = Platform::Concrete.create( :x => 640, :y => $window.height - 128)
+    @platform7 = Platform::Concrete.create( :x => 768, :y => $window.height - 128)
+    @platform8 = Platform::Concrete.create( :x => 896, :y => $window.height - 128)
 
-    @platform11 = Platform::Crate.create( :x => 512, :y => $window.height - 192, :width => 128, :height => 128)
-    @platform12 = Platform::Crate.create( :x => 896, :y => $window.height - 192, :width => 128, :height => 128)
+    @platform11 = Platform::Crate.create( :x => 512, :y => $window.height - 192)
+    @platform12 = Platform::Crate.create( :x => 896, :y => $window.height - 192)
     @background = Image["background.png"]
     @player = Player.create( :x => 100, :y => 200, :zorder => 300)
     @player.input = { :holding_left   => Proc.new { @player.pressed_left = true; @player.pressed_right = false },

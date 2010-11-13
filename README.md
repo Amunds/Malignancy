@@ -20,3 +20,9 @@ Controls
 * Move right: Right
 * Jump: Space
 * Shoot: Left Shift
+
+TODO
+----
+
+* Enemies
+* Level editor
