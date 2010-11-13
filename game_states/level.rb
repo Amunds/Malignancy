@@ -16,7 +16,9 @@ class Level < GameState
     @platform8 = Platform::Concrete.create( :x => 896, :y => $window.height - 128)
 
     @platform11 = Platform::Crate.create( :x => 512, :y => $window.height - 192)
-    @platform12 = Platform::Crate.create( :x => 896, :y => $window.height - 192)
+    @platform12 = Platform::Crate.create( :x => 640, :y => $window.height - 192)
+    @platform13 = Platform::Crate.create( :x => 768, :y => $window.height - 192)
+    @platform14 = Platform::Crate.create( :x => 640, :y => $window.height - 256)
     @background = Image["background.png"]
     @player = Player.create( :x => 100, :y => 200, :zorder => 300)
     @player.input = { :holding_left   => Proc.new { @player.pressed_left = true; @player.pressed_right = false },

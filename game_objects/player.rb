@@ -11,7 +11,7 @@ class Player < GameObject
       @direction = :right
       @accel = 0.2
       @skid = 0.4
-      @decel = 0.4
+      @decel = 0.9
       @image = Image["player.png"]
       @pressed_jump = false
       @pressed_left = false
