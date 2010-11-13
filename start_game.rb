@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/opt/local/bin/ruby
 
 require 'rubygems'
 require 'pretty-fsm'
