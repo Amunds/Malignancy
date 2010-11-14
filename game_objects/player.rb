@@ -53,11 +53,11 @@ class Player < GameObject
     
    # idle state functions
    def start_idle
-      puts "start_idle"
+      #puts "start_idle"
    end
     
    def while_idle
-      puts "idling"
+     # puts "idling"
       self.resolve_collisions
    end
 
@@ -65,17 +65,17 @@ class Player < GameObject
    end
 
    def stopped?
-      puts "stopped?"
+      #puts "stopped?"
       return true if self.velocity_x == 0 and ((not @pressed_left) and (not @pressed_right))
    end
     
    # walking/running state functions
    def start_moving
-      puts "start_moving"
+      #puts "start_moving"
    end
     
    def while_moving
-      puts "moving"
+      #puts "moving"
       # if user is pressing a direction button
       self.resolve_collisions
       if @pressed_right && self.velocity_x < 0
@@ -119,19 +119,19 @@ class Player < GameObject
    end
     
    def can_move?
-      puts "can_move?"
+      #puts "can_move?"
       @pressed_left or @pressed_right
    end
     
    # jumping functions
    def start_jumping
-      puts "start_jumping"
+      #puts "start_jumping"
       @y -= 1
       self.velocity_y = -10
    end
     
    def while_jumping
-      puts "jumping"
+      #puts "jumping"
       if @pressed_jump == false
          self.velocity_y += 1
       end
@@ -139,18 +139,18 @@ class Player < GameObject
    end
    
    def can_jump?
-      puts "can_jump?"
+      #puts "can_jump?"
       return true if @pressed_jump and ((@fsm.state != :falling) and (@fsm.state != :jumping))
       return false
    end
     
    # falling functions
    def start_falling
-      puts "start_falling"
+      #puts "start_falling"
    end
     
    def while_falling
-      puts "falling"
+      #puts "falling"
       self.while_moving
    end
 
@@ -158,7 +158,7 @@ class Player < GameObject
    end
 
    def can_fall?
-      puts "can_fall?"
+      #puts "can_fall?"
       self.each_collision(Platform) do
          if @fsm.state == :jumping
             return true
@@ -171,7 +171,7 @@ class Player < GameObject
    end
     
    def moving_and_collide_platform?
-      puts "moving_and_collide_platform?"
+      #puts "moving_and_collide_platform?"
       if self.velocity_x == 0
          return false
       end
@@ -179,7 +179,7 @@ class Player < GameObject
    end
 
    def collide_platform?
-      puts "collide_platform?"
+      #puts "collide_platform?"
       self.each_collision(Platform) do
          return true
       end
@@ -203,15 +203,7 @@ class Player < GameObject
       #   self.acceleration_x = 0
       #end
       
-      # keep box from leaving top/bottom of screen
-      if @y < 0
-         @y = 0
-         self.velocity_y = 0
-      end
 
-      if (@y + @box.height) > $window.height
-         @y = $window.height - @box.height
-      end
       
       # update box position
       @box.x = @x

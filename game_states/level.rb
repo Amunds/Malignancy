@@ -5,24 +5,10 @@ class Level < GameState
     $window.caption = "Test #{$window.fps}"
     self.viewport.game_area = [0, 0, 12000, 12000]
     self.viewport.lag = 0.95
-    @file = File.join(ROOT, "levels", self.filename + ".yml")
-    load_game_objects(:file => @file, :debug => false)
+    @file = File.join(ROOT, "levels", self.filename + ".oel")
+    load_game_objects(:file => @file)
     
-    self.input = {:esc => :exit, :e => :edit}
-    
-    @platform = Platform::Concrete.create( :x => 0, :y => $window.height - 128)
-    @platform2 = Platform::Concrete.create( :x => 128, :y => $window.height - 128)
-    @platform3 = Platform::Concrete.create( :x => 256, :y => $window.height - 128)
-    @platform4 = Platform::Concrete.create( :x => 384, :y => $window.height - 128)
-    @platform5 = Platform::Concrete.create( :x => 512, :y => $window.height - 128)
-    @platform6 = Platform::Concrete.create( :x => 640, :y => $window.height - 128)
-    @platform7 = Platform::Concrete.create( :x => 768, :y => $window.height - 128)
-    @platform8 = Platform::Concrete.create( :x => 896, :y => $window.height - 128)
-
-    @platform11 = Platform::Crate.create( :x => 512, :y => $window.height - 192)
-    @platform12 = Platform::Crate.create( :x => 640, :y => $window.height - 192)
-    @platform13 = Platform::Crate.create( :x => 768, :y => $window.height - 192)
-    @platform14 = Platform::Crate.create( :x => 640, :y => $window.height - 256)
+    self.input = {:esc => :exit}
     @background = Image["background.png"]
     @player = Player.create( :x => 100, :y => 200, :zorder => 300)
     @player.input = { :holding_left   => Proc.new { @player.pressed_left = true; @player.pressed_right = false },
@@ -45,8 +31,35 @@ class Level < GameState
     self.viewport.x = @player.x - $window.width/2
     self.viewport.y = @player.y - ($window.height - 180)
   end
+    
+  def symbolize_keys
+    inject({}) do |options, (key, value)|
+      options[(key.to_sym rescue key) || key] = value
+      options
+    end
+  end
   
-  def edit
-    push_game_state GameStates::Edit.new(:file => @file, :grid => [64,64], :except => [Player, Bullet], :debug => false)
+  def load_game_objects(options = {})
+    file = options[:file] || self.filename + ".oel"
+    #debug = options[:debug]
+    except = Array(options[:except]) || []
+    
+    require 'nokogiri'
+    
+    puts "* Loading game objects from #{file}"
+    if File.exists?(file)
+      objects = Nokogiri::XML(File.read(file))
+      objects.xpath("//text()").remove
+      objects.xpath("//level/*").each do |o|  
+        klass = Kernel::const_get(o.values.to_s.capitalize)
+        unless klass.class == "GameObject" && !except.include?(klass)
+          o.children.each do |c|
+            attributes = Hash[c.keys[2].to_sym => c.values[2].to_i, c.keys[3].to_sym => c.values[3].to_i]
+            klass.create(attributes)
+          end
+        end
+      end
+    end
+    self.game_objects.sync
   end
 end

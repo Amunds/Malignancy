@@ -1,0 +1,16 @@
+<project>
+	<name>Malignancy</name>
+	<settings>
+		<defaultWidth>4000</defaultWidth>
+		<defaultHeight>4000</defaultHeight>
+		<workingDirectory>media/</workingDirectory>
+	</settings>
+	<tilesets>
+    <tileset name="concrete" image="concrete.png" tileWidth="128" tileHeight="128"/>
+    <tileset name="crate" image="crate.png" tileWidth="64" tileHeight="64"/>
+	</tilesets>
+	<layers>
+    <tiles name="concretes" gridSize="128" />
+    <tiles name="crates" gridSize="64" />
+	</layers>
+</project>
