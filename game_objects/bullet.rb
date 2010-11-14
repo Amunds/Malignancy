@@ -10,8 +10,8 @@ class Bullet < GameObject
   end
   
   def update
-    if self.outside_window?
-      self.die
-    end
+    #if self.outside_window?
+    #  self.die
+    #end
   end
 end
