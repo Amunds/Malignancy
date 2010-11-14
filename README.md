@@ -10,6 +10,7 @@ Dependencies
 * gosu
 * chingu
 * pretty-fsm
+* nokogiri
 
 Install with RubyGems
 
