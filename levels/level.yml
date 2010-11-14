@@ -1,0 +1,545 @@
+--- 
+- Crate: 
+    :color: 4294967295
+    :x: 509.397420867526
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 417.2
+- Crate: 
+    :color: 4294967295
+    :x: 438.569753810082
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 272.0
+- Crate: 
+    :color: 4294967295
+    :x: 426.565064478312
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 220.4
+- Crate: 
+    :color: 4294967295
+    :x: 807.113716295428
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 161.6
+- Crate: 
+    :color: 4294967295
+    :x: 807.113716295428
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 161.6
+- Crate: 
+    :color: 4294967295
+    :x: 807.113716295428
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 161.6
+- Crate: 
+    :color: 4294967295
+    :x: 1048.40797186401
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: -47.2
+- Crate: 
+    :color: 4294967295
+    :x: 841.123094958968
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 178.8
+- Crate: 
+    :color: 4294967295
+    :x: 793.104337631887
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 222.0
+- Crate: 
+    :color: 4294967295
+    :x: 755.8898007034
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 237.6
+- Crate: 
+    :color: 4294967295
+    :x: 705.470105509965
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 254.4
+- Crate: 
+    :color: 4294967295
+    :x: 635.842907385697
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 258.0
+- Crate: 
+    :color: 4294967295
+    :x: 464.175849941383
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 234.0
+- Crate: 
+    :color: 4294967295
+    :x: 456.973036342321
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 229.2
+- Crate: 
+    :color: 4294967295
+    :x: 491.786635404455
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 214.8
+- Crate: 
+    :color: 4294967295
+    :x: 491.786635404455
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 214.8
+- Crate: 
+    :color: 4294967295
+    :x: 491.786635404455
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 214.8
+- Crate: 
+    :color: 4294967295
+    :x: 491.786635404455
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 214.8
+- Crate: 
+    :color: 4294967295
+    :x: 491.786635404455
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 214.8
+- Crate: 
+    :color: 4294967295
+    :x: 384.9449003517
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 141.6
+- Crate: 
+    :color: 4294967295
+    :x: 681.460726846424
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 220.8
+- Crate: 
+    :color: 4294967295
+    :x: 677.859320046893
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 222.0
+- Crate: 
+    :color: 4294967295
+    :x: 591.425556858148
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 207.6
+- Crate: 
+    :color: 4294967295
+    :x: 593.826494724502
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 212.4
+- Crate: 
+    :color: 4294967295
+    :x: 633.441969519344
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 212.4
+- Crate: 
+    :color: 4294967295
+    :x: 637.043376318874
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 226.8
+- Crate: 
+    :color: 4294967295
+    :x: 637.043376318874
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 226.8
+- Crate: 
+    :color: 4294967295
+    :x: 616.635404454865
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 238.8
+- Crate: 
+    :color: 4294967295
+    :x: 615.434935521688
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 238.8
+- Crate: 
+    :color: 4294967295
+    :x: 614.234466588511
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 238.8
+- Crate: 
+    :color: 4294967295
+    :x: 614.234466588511
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 238.8
+- Crate: 
+    :color: 4294967295
+    :x: 605.831184056272
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 241.2
+- Crate: 
+    :color: 4294967295
+    :x: 590.225087924971
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 243.6
+- Crate: 
+    :color: 4294967295
+    :x: 555.411488862837
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 283.2
+- Crate: 
+    :color: 4294967295
+    :x: 555.411488862837
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 283.2
+- Crate: 
+    :color: 4294967295
+    :x: 555.411488862837
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 283.2
+- Crate: 
+    :color: 4294967295
+    :x: 555.411488862837
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 283.2
+- Crate: 
+    :color: 4294967295
+    :x: 555.411488862837
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 283.2
+- Crate: 
+    :color: 4294967295
+    :x: 555.411488862837
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 283.2
+- Crate: 
+    :color: 4294967295
+    :x: 438.966002344666
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 511.2
+- Crate: 
+    :color: 4294967295
+    :x: 435.364595545135
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 501.6
+- Crate: 
+    :color: 4294967295
+    :x: 435.364595545135
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 501.6
+- Crate: 
+    :color: 4294967295
+    :x: 435.364595545135
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 501.6
+- Crate: 
+    :color: 4294967295
+    :x: 382.543962485346
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 489.6
+- Crate: 
+    :color: 4294967295
+    :x: 374.140679953107
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 510.0
+- Crate: 
+    :color: 4294967295
+    :x: 437.765533411489
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 340.8
+- Crate: 
+    :color: 4294967295
+    :x: 515.796014067995
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 355.2
+- Crate: 
+    :color: 4294967295
+    :x: 519.397420867526
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 355.2
+- Crate: 
+    :color: 4294967295
+    :x: 513.395076201641
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 344.4
+- Crate: 
+    :color: 4294967295
+    :x: 514.595545134818
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 345.6
+- Crate: 
+    :color: 4294967295
+    :x: 489.385697538101
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 348.0
+- Crate: 
+    :color: 4294967295
+    :x: 486.984759671747
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 348.0
+- Crate: 
+    :color: 4294967295
+    :x: 486.984759671747
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 348.0
+- Crate: 
+    :color: 4294967295
+    :x: 483.383352872216
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 348.0
+- Crate: 
+    :color: 4294967295
+    :x: 483.383352872216
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 348.0
+- Crate: 
+    :color: 4294967295
+    :x: 482.182883939039
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 350.4
+- Crate: 
+    :color: 4294967295
+    :x: 347.730363423212
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 520.8
+- Crate: 
+    :color: 4294967295
+    :x: 347.730363423212
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 520.8
+- Crate: 
+    :color: 4294967295
+    :x: 347.730363423212
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 520.8
+- Crate: 
+    :color: 4294967295
+    :x: 347.730363423212
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 520.8
+- Crate: 
+    :color: 4294967295
+    :x: 347.730363423212
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 520.8
+- Crate: 
+    :color: 4294967295
+    :x: 347.730363423212
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 520.8
+- Crate: 
+    :color: 4294967295
+    :x: 228.487690504103
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 438.8
+- Crate: 
+    :color: 4294967295
+    :x: 252.497069167644
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 381.2
+- Crate: 
+    :color: 4294967295
+    :x: 72.4267291910903
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 564.8
+- Crate: 
+    :color: 4294967295
+    :x: 170.865181711606
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 580.4
+- Crate: 
+    :color: 4294967295
+    :x: 257.298944900352
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 574.4
+- Crate: 
+    :color: 4294967295
+    :x: 263.301289566237
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :y: 528.8

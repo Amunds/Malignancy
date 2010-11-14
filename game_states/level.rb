@@ -5,6 +5,10 @@ class Level < GameState
     $window.caption = "Test #{$window.fps}"
     self.viewport.game_area = [0, 0, 12000, 12000]
     self.viewport.lag = 0.95
+    @file = File.join(ROOT, "levels", self.filename + ".yml")
+    load_game_objects(:file => @file, :debug => false)
+    
+    self.input = {:esc => :exit, :e => :edit}
     
     @platform = Platform::Concrete.create( :x => 0, :y => $window.height - 128)
     @platform2 = Platform::Concrete.create( :x => 128, :y => $window.height - 128)
@@ -33,12 +37,16 @@ class Level < GameState
   
   def draw
     super
-      @background.draw(0,0,100)
+    @background.draw(0,0,100)
   end
   
   def update
     super
     self.viewport.x = @player.x - $window.width/2
     self.viewport.y = @player.y - ($window.height - 180)
+  end
+  
+  def edit
+    push_game_state GameStates::Edit.new(:file => @file, :grid => [64,64], :except => [Player, Bullet], :debug => false)
   end
 end

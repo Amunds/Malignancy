@@ -18,9 +18,13 @@ class Platform < GameObject
   def draw
     @image.draw(@x,@y,200)
   end
+  def draw_debug
+    
+  end
 end
 
 class Concrete < Platform
+  
 end
 
 class Crate < Platform
