@@ -6,7 +6,7 @@
 		<workingDirectory>media/</workingDirectory>
 	</settings>
 	<tilesets>
-    <tileset name="concrete" image="concrete.png" tileWidth="128" tileHeight="128"/>
+    <tileset name="concrete" image="concrete_tiles.png" tileWidth="128" tileHeight="128"/>
     <tileset name="crate" image="crate.png" tileWidth="64" tileHeight="64"/>
 	</tilesets>
 	<layers>

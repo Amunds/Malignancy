@@ -1,17 +1,12 @@
 class Bullet < GameObject
   has_traits :timer, :collision_detection, :velocity
+  trait :bounding_box, :debug => false
   
   def setup
     @image = Image["bullet.png"]
   end
   
   def die
-    self.destroy
-  end
-  
-  def update
-    #if self.outside_window?
-    #  self.die
-    #end
+    destroy
   end
 end

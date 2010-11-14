@@ -1,5 +1,5 @@
 class Level < GameState
-  traits :viewport
+  traits :viewport, :timer
   def initialize()
     super
     $window.caption = "Test #{$window.fps}"
@@ -10,7 +10,8 @@ class Level < GameState
     
     self.input = {:esc => :exit}
     @background = Image["background.png"]
-    @player = Player.create( :x => 100, :y => 200, :zorder => 300)
+    @light_image = Image["light_test.png"]
+    @player = Player.create( :x => 100, :y => 900, :zorder => 300)
     @player.input = { :holding_left   => Proc.new { @player.pressed_left = true; @player.pressed_right = false },
                       :holding_right  => Proc.new { @player.pressed_right = true; @player.pressed_left = false },
                       :released_left  => Proc.new { @player.pressed_left = false },
@@ -30,18 +31,15 @@ class Level < GameState
     super
     self.viewport.x = @player.x - $window.width/2
     self.viewport.y = @player.y - ($window.height - 180)
-  end
     
-  def symbolize_keys
-    inject({}) do |options, (key, value)|
-      options[(key.to_sym rescue key) || key] = value
-      options
+    Bullet.each_bounding_box_collision(Platform) do |bullet, tile|
+      @light_image.draw(bullet.x, bullet.y, 400)
+      bullet.die
     end
   end
   
   def load_game_objects(options = {})
     file = options[:file] || self.filename + ".oel"
-    #debug = options[:debug]
     except = Array(options[:except]) || []
     
     require 'nokogiri'
