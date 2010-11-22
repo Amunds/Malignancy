@@ -8,9 +8,15 @@
 	<tilesets>
     <tileset name="concrete" image="concrete_tiles.png" tileWidth="128" tileHeight="128"/>
     <tileset name="crate" image="crate.png" tileWidth="64" tileHeight="64"/>
+    <tileset name="concrete_window" image="concrete_windows.png" tileWidth="128" tileHeight="128"/>
+    <tileset name="concrete_filler" image="concrete_filler.png" tileWidth="128" tileHeight="128"/>
+    <tileset name="concrete_topleft" image="concrete_topleft.png" tileWidth="128" tileHeight="128"/>
 	</tilesets>
 	<layers>
     <tiles name="concretes" gridSize="128" />
     <tiles name="crates" gridSize="64" />
+    <tiles name="concrete_windows" gridSize="128" />
+    <tiles name="concrete_filler" gridSize="128" />
+    <tiles name="concrete_topleft" gridSize="128" />
 	</layers>
 </project>

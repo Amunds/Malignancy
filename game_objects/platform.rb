@@ -17,13 +17,23 @@ class Platform < GameObject
     
   def draw
     @image.draw(@x,@y,200)
-  end
-  def draw_debug
-    
+    #@image.retrofy
   end
 end
 
 class Concrete < Platform
+  
+end
+
+class ConcreteWindow < Platform
+  
+end
+
+class ConcreteFiller < Platform
+  
+end
+
+class ConcreteTopleft < Platform
   
 end
 

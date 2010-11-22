@@ -6,8 +6,10 @@ require 'chingu'
 include Gosu
 include Chingu
 
+
 require_rel 'game_objects/'
 require_rel 'game_states/'
+require './lib/extensions'
 
 class Game < Chingu::Window
   def initialize
@@ -17,7 +19,7 @@ class Game < Chingu::Window
   end
   
   def setup
-    retrofy # This create non-smooth edges, fixes the black lines on tiles
+    #retrofy #Fucks up my moon
   end
 end
 

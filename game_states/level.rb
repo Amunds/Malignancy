@@ -8,10 +8,8 @@ class Level < GameState
     @file = File.join(ROOT, "levels", self.filename + ".oel")
     load_game_objects(:file => @file)
     
-    self.input = {:esc => :exit}
     @background = Image["background.png"]
-    @light_image = Image["light_test.png"]
-    @player = Player.create( :x => 100, :y => 900, :zorder => 300)
+    @player = Player.create( :x => 0, :y => 128, :zorder => 300)
     @player.input = { :holding_left   => Proc.new { @player.pressed_left = true; @player.pressed_right = false },
                       :holding_right  => Proc.new { @player.pressed_right = true; @player.pressed_left = false },
                       :released_left  => Proc.new { @player.pressed_left = false },
@@ -22,18 +20,20 @@ class Level < GameState
                     }
   end
   
+  def setup
+  end
+  
   def draw
     super
-    @background.draw(0,0,100)
+    #@moon.draw(300,200,100)
   end
   
   def update
     super
     self.viewport.x = @player.x - $window.width/2
-    self.viewport.y = @player.y - ($window.height - 180)
+    self.viewport.y = @player.y - ($window.height - 320)
     
     Bullet.each_bounding_box_collision(Platform) do |bullet, tile|
-      @light_image.draw(bullet.x, bullet.y, 400)
       bullet.die
     end
   end
@@ -48,8 +48,10 @@ class Level < GameState
     if File.exists?(file)
       objects = Nokogiri::XML(File.read(file))
       objects.xpath("//text()").remove
-      objects.xpath("//level/*").each do |o|  
-        klass = Kernel::const_get(o.values.to_s.capitalize)
+      objects.xpath("//level/*").each do |o|
+        #p o.values.to_s.capitalize
+        klass = Kernel::const_get(String.classify(o.values))
+        #Kernel::const_get(o.values.to_s.capitalize)
         unless klass.class == "GameObject" && !except.include?(klass)
           o.children.each do |c|
             attributes = Hash[c.keys[2].to_sym => c.values[2].to_i, c.keys[3].to_sym => c.values[3].to_i]
