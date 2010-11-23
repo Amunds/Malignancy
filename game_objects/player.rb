@@ -185,9 +185,6 @@ class Player < GameObject
    
    def update
       @fsm.advance
-      
-      p self.x
-      p self.y
       # keep box from leaving sides of screen
       if @x < 0
         @x = 0
@@ -222,6 +219,10 @@ class Player < GameObject
   def resolve_collisions
     self.each_collision(Platform) do | me, platform |
       me.resolve_platforms(platform)
+    end
+    
+    self.each_collision(Lift) do | me, lift |
+      me.resolve_platforms(lift)
     end
   end
 
