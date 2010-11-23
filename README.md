@@ -6,13 +6,13 @@ A 2D platformer where we follow our hero on an epic journey to The End Of The Wo
 Dependencies
 ------------
 
-* ruby
+* ruby 1.8
 * gosu
 * chingu
 * pretty-fsm
 * nokogiri
 
-Install with RubyGems
+Run `bundle install` to install the dependencies.
 
 Controls
 --------
