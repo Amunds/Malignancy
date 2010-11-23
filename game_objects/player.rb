@@ -6,7 +6,6 @@ class Player < GameObject
     
    def initialize(options = {})
       super
-      #@color = options[:color] or Color.new(255,0,0,255)
       @box = Rect.new([@x, @y, 48, 64])
       @direction = :right
       @accel = 0.2
@@ -43,7 +42,7 @@ class Player < GameObject
    end
     
    def initial_state
-      puts "initial_state"
+      #puts "initial_state"
       if self.first_collision(Platform)
          @previous_state = :idle
       else
@@ -171,7 +170,6 @@ class Player < GameObject
    end
     
    def moving_and_collide_platform?
-      #puts "moving_and_collide_platform?"
       if self.velocity_x == 0
          return false
       end
@@ -179,7 +177,6 @@ class Player < GameObject
    end
 
    def collide_platform?
-      #puts "collide_platform?"
       self.each_collision(Platform) do
          return true
       end
@@ -187,31 +184,19 @@ class Player < GameObject
    end
    
    def update
-      #self.resolve_collisions
       @fsm.advance
       
       # keep box from leaving sides of screen
       if @x < 0
-         @x = 0
-         self.velocity_x = 0
-         self.acceleration_x = 0
+        @x = 0
+        self.velocity_x = 0
+        self.acceleration_x = 0
       end
-
-      #if (@x + @box.width) > $window.width
-      #   @x = $window.width - @box.width
-      #   self.velocity_x = 0
-      #   self.acceleration_x = 0
-      #end
-      
-
-      
-      # update box position
       @box.x = @x
       @box.y = @y
    end
 
    def draw
-    #$window.fill_rect(@box, @color)
     if @direction == :right
       offs_x = 0
       factor = 1.0
@@ -223,10 +208,6 @@ class Player < GameObject
    end
    
    def fire
-     #return if @cooling_down
-     #@cooling_down = true
-     #after(200) { @cooling_down = false }
-
      @bullet = Bullet.create(:x => self.x, :y => self.y + 24, :zorder => 600)
      if @direction == :right
        @bullet.velocity_x += 12
@@ -257,16 +238,5 @@ class Player < GameObject
          self.velocity_x = 0
          self.acceleration_x = 0
       end
-      #self->right/platform->left collision
-      
-      
-      #self->left/platform->right collision
-      
-      
-      #self->bottom/platform->top collision
-
-      
-      #self->top/platform->bottom collision
-
    end
 end

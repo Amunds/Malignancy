@@ -8,6 +8,8 @@ class Level < GameState
     @file = File.join(ROOT, "levels", self.filename + ".oel")
     load_game_objects(:file => @file)
     
+    @lift = Lift.create(:x => 250, :y => 400)
+    
     @background = Image["background.png"]
     @player = Player.create( :x => 0, :y => 128, :zorder => 300)
     @player.input = { :holding_left   => Proc.new { @player.pressed_left = true; @player.pressed_right = false },
