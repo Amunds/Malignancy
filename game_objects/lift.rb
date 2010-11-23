@@ -5,7 +5,7 @@ class Lift < GameObject
   
   def initialize(options = {})
     super
-    @box = Rect.new([@x, @y, 48, 64])
+    @box = Rect.new([@x, @y, 64, 12])
     @color = Color.new(255,0,255,0)
     @fsm = PrettyFSM::FSM.new(self, self.initial_state) do
        transition :from => :idle, :to => :moving, :if => :can_move?

@@ -198,7 +198,7 @@ class Player < GameObject
       @box.y = @y
    end
 
-   def draw
+  def draw
     if @direction == :right
       offs_x = 0
       factor = 1.0
@@ -206,39 +206,39 @@ class Player < GameObject
       offs_x = 28
       factor = -1.0
     end
-      @image.draw(@x + offs_x, @y, 400, factor.to_f, 1)
-   end
+    @image.draw(@x + offs_x, @y, 400, factor.to_f, 1)
+  end
    
-   def fire
-     @bullet = Bullet.create(:x => self.x, :y => self.y + 24, :zorder => 600)
-     if @direction == :right
-       @bullet.velocity_x += 12
-     else
-       @bullet.velocity_x -= 12
-     end
-   end
+  def fire
+    @bullet = Bullet.create(:x => self.x, :y => self.y + 24, :zorder => 600)
+    if @direction == :right
+      @bullet.velocity_x += 12
+    else
+      @bullet.velocity_x -= 12
+    end
+  end
    
    # Collision response
-   def resolve_collisions
-      self.each_collision(Platform) do | me, platform |
-         me.resolve_platforms(platform)
-      end
-   end
+  def resolve_collisions
+    self.each_collision(Platform) do | me, platform |
+      me.resolve_platforms(platform)
+    end
+  end
 
-   def resolve_platforms(platform)
-      if @box.bottom_side.collide_rect?(platform.box.top_side) #and self.velocity_y > 0
-         @y = platform.box.y - @box.height
-      elsif @box.top_side.collide_rect?(platform.box.bottom_side) #and self.velocity_y < 0 #and self.velocity_y > 0 and @x + @box.width < platform.x + 5
-         @y = platform.box.y + platform.box.height + 1
-         self.velocity_y = 0
-      elsif @box.left_side.collide_rect?(platform.box.right_side) and self.velocity_x < 0
-         @x = platform.box.x + platform.box.width
-         self.velocity_x = 0
-         self.acceleration_x = 0
-      elsif @box.right_side.collide_rect?(platform.box.left_side) and self.velocity_x > 0
-         @x = platform.box.x - @box.width
-         self.velocity_x = 0
-         self.acceleration_x = 0
-      end
-   end
+  def resolve_platforms(platform)
+    if @box.bottom_side.collide_rect?(platform.box.top_side) #and self.velocity_y > 0
+      @y = platform.box.y - @box.height
+    elsif @box.top_side.collide_rect?(platform.box.bottom_side) #and self.velocity_y < 0 #and self.velocity_y > 0 and @x + @box.width < platform.x + 5
+      @y = platform.box.y + platform.box.height + 1
+      self.velocity_y = 0
+    elsif @box.left_side.collide_rect?(platform.box.right_side) and self.velocity_x < 0
+      @x = platform.box.x + platform.box.width
+      self.velocity_x = 0
+      self.acceleration_x = 0
+    elsif @box.right_side.collide_rect?(platform.box.left_side) and self.velocity_x > 0
+      @x = platform.box.x - @box.width
+      self.velocity_x = 0
+      self.acceleration_x = 0
+    end
+  end
 end

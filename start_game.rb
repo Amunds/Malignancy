@@ -19,7 +19,8 @@ class Game < Chingu::Window
   end
   
   def setup
-    #retrofy #Fucks up my moon
+    # TODO: Retrofy should be used only on Platform
+    #retrofy
   end
 end
 
