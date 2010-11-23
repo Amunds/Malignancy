@@ -31,10 +31,11 @@ class Lift < GameObject
     p @from_y
     p @to_y
     p self.y
+    @box.y = self.y
     if self.y >= @from_y.to_f
       self.velocity_y = -1
     elsif self.y == @to_y.to_f
-      self.velocity_y = 0
+      self.velocity_y = 1      
     end
   end
 end
