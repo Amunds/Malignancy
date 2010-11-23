@@ -8,10 +8,10 @@ class Level < GameState
     @file = File.join(ROOT, "levels", self.filename + ".oel")
     load_game_objects(:file => @file)
     
-    @lift = Lift.create(:x => 250, :y => 400)
+    @lift = Lift.create(:x => 1400, :y => 700, :zorder => 300)
     
     @background = Image["background.png"]
-    @player = Player.create( :x => 0, :y => 128, :zorder => 300)
+    @player = Player.create( :x => 0, :y => 600, :zorder => 300)
     @player.input = { :holding_left   => Proc.new { @player.pressed_left = true; @player.pressed_right = false },
                       :holding_right  => Proc.new { @player.pressed_right = true; @player.pressed_left = false },
                       :released_left  => Proc.new { @player.pressed_left = false },
@@ -27,7 +27,6 @@ class Level < GameState
   
   def draw
     super
-    #@moon.draw(300,200,100)
   end
   
   def update

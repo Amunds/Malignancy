@@ -186,6 +186,8 @@ class Player < GameObject
    def update
       @fsm.advance
       
+      p self.x
+      p self.y
       # keep box from leaving sides of screen
       if @x < 0
         @x = 0
