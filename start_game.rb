@@ -1,6 +1,7 @@
 #!/opt/local/bin/ruby
 
 require 'rubygems'
+require 'bundler/setup'
 require 'pretty-fsm'
 require 'chingu'
 include Gosu
