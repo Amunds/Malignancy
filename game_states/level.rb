@@ -8,7 +8,7 @@ class Level < GameState
     @file = File.join(ROOT, "levels", self.filename + ".oel")
     load_game_objects(:file => @file)
     
-    @lift = Lift.create(:x => 1450, :y => 760, :zorder => 300, :from_y => 760, :to_y => 600)
+    @lift = Lift.create(:x => 1450, :y => 760, :zorder => 300, :from_y => 760, :to_y => 900)
     
     @background = Image["background.png"]
     @player = Player.create( :x => 1300, :y => 600, :zorder => 300)

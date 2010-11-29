@@ -169,12 +169,12 @@ class Player < GameObject
       return true
    end
     
-   def moving_and_collide_platform?
-      if self.velocity_x == 0
-         return false
-      end
-      return self.collide_platform?
-   end
+  def moving_and_collide_platform?
+    if self.velocity_x == 0
+      return false
+    end
+    return self.collide_platform?
+  end
 
    def collide_platform?
       self.each_collision(Platform) do
@@ -223,6 +223,8 @@ class Player < GameObject
     
     self.each_collision(Lift) do | me, lift |
       me.resolve_platforms(lift)
+      p "collision lift"
+      me.input = { :p => Proc.new { lift.activate } }
     end
   end
 

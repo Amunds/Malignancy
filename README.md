@@ -25,8 +25,8 @@ Controls
 Map Editing
 -----------
 
-Uses http://ogmoeditor.com/ for maps.
-ps. You need to remove the second and third line in the level.oel file for it to work atm.
+* Uses http://ogmoeditor.com/ for maps.
+* ps. You need to remove the second and third line in the level.oel file for it to work atm.
 
 TODO
 ----

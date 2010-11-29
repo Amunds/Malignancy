@@ -15,7 +15,7 @@
 	<layers>
     <tiles name="concretes" gridSize="128" />
     <tiles name="crates" gridSize="64" />
-    <tiles name="concrete_windows" gridSize="128" />
+    <tiles name="concrete_window" gridSize="128" />
     <tiles name="concrete_filler" gridSize="128" />
     <tiles name="concrete_topleft" gridSize="128" />
 	</layers>
