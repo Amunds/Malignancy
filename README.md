@@ -21,15 +21,27 @@ Controls
 * Move right: Right
 * Jump: Space
 * Shoot: Left Shift
+* p: Activate lifts
 
 Map Editing
 -----------
 
 * Uses http://ogmoeditor.com/ for maps.
-* ps. You need to remove the second and third line in the level.oel file for it to work atm.
+* ps. You need to remove the second and third line in the level.oel file for it to work at the moment.
 
 TODO
 ----
 
 * Enemies
 * Support tilesets for maps
+
+Credits
+-------
+
+* David Adrian for the name.
+* The authors of the libraries I use.
+
+License
+-------
+
+Amund Sivertsen (c) 2010. Released under the MIT License.
