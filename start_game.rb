@@ -21,7 +21,7 @@ class Game < Chingu::Window
   
   def setup
     # TODO: Retrofy should be used only on the Platform class
-    #retrofy
+    retrofy
   end
 end
 
