@@ -17,7 +17,7 @@ class Player < GameObject
     @pressed_right = false
     self.acceleration_y = 0.3
     self.max_velocity_y = 10
-    self.max_velocity_x = 12
+    self.max_velocity_x = 10
     @fsm = PrettyFSM::FSM.new(self, self.initial_state) do
       transition :from => :idle, :to => :moving, :if => :can_move?
       transition :from => :idle, :to => :jumping, :if => :can_jump?
@@ -76,7 +76,7 @@ class Player < GameObject
   def while_moving
     puts "moving"
     # if user is pressing a direction button
-    self.resolve_collisions
+    #self.resolve_collisions
     if @pressed_right && self.velocity_x < 0
       self.acceleration_x = 0
       #self.velocity_x += @skid
@@ -106,10 +106,10 @@ class Player < GameObject
         end
 
         if self.velocity_x > 0
-          #self.velocity_x -= @decel unless (self.velocity_x - @skid) < 0
+          self.velocity_x -= @decel unless (self.velocity_x - @skid) < 0
           self.acceleration_x = -@decel
         elsif self.velocity_x < 0
-          #self.velocity_x += @decel unless (self.velocity_x + @skid) > 0 
+          self.velocity_x += @decel unless (self.velocity_x + @skid) > 0 
           self.acceleration_x = @decel
         end
       end
@@ -176,12 +176,12 @@ class Player < GameObject
     return self.collide_platform?
   end
 
-   def collide_platform?
-      self.each_collision(Platform) do
-         return true
-      end
-      return false
-   end
+  def collide_platform?
+    self.each_collision(Platform) do
+      return true
+    end
+    return false
+  end
    
    def update
       @fsm.advance
@@ -224,13 +224,14 @@ class Player < GameObject
     self.each_collision(Lift) do |me, lift|
       me.resolve_platforms(lift)
       p "collision lift"
-      self.input = { :p => Proc.new { lift.activate } }
+      #self.input = { :d => Proc.new { lift.activate } }
     end
   end
 
   def resolve_platforms(platform)
     if @box.bottom_side.collide_rect?(platform.box.top_side)# and self.velocity_y > 0
       @y = platform.box.y - @box.height
+      p "colliding top"
     elsif @box.top_side.collide_rect?(platform.box.bottom_side) and self.velocity_y < 0 and self.velocity_y > 0 and @x + @box.width < platform.x + 5
       @y = platform.box.y + platform.box.height + 1
       self.velocity_y = 0

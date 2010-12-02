@@ -1,5 +1,6 @@
 class Lift < GameObject
   traits :timer, :collision_detection, :velocity
+  has_trait :bounding_box, :debug => true
   attr_accessor :box, :from_y, :to_y
   include PrettyFSM::Abbreviate
   
@@ -60,11 +61,8 @@ class Lift < GameObject
   
   def update
     super
-    p @from_y
-    p @to_y
-    p self.y
     @box.y = self.y - 32 #TODO: FIx collision on this CLass
-    
+    @box.x = self.x - 32
     if self.y == @from_y or self.y == @to_y 
       self.stand_still
     end
